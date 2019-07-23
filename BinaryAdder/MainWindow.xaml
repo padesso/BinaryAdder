@@ -1,0 +1,149 @@
+﻿<Window x:Class="BinaryAdder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BinaryAdder"
+        xmlns:ToggleSwitch="clr-namespace:ToggleSwitch;assembly=ToggleSwitch"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="500"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"  >
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ToggleSwitch:HorizontalToggleSwitch
+            Grid.Row="0"
+            Grid.Column="1"
+            IsChecked="{Binding NumeratorEightBit, Mode=TwoWay}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UncheckedContent="0" 
+            CheckedContent="1"/>
+
+        <ToggleSwitch:HorizontalToggleSwitch
+            Grid.Row="0"
+            Grid.Column="2"
+            IsChecked="{Binding NumeratorFourBit, Mode=TwoWay}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UncheckedContent="0" 
+            CheckedContent="1"/>
+
+        <ToggleSwitch:HorizontalToggleSwitch
+            Grid.Row="0"
+            Grid.Column="3"
+            IsChecked="{Binding NumeratorTwoBit, Mode=TwoWay}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UncheckedContent="0" 
+            CheckedContent="1"/>
+
+        <ToggleSwitch:HorizontalToggleSwitch
+            Grid.Row="0"
+            Grid.Column="4"
+            IsChecked="{Binding NumeratorOneBit, Mode=TwoWay}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UncheckedContent="0" 
+            CheckedContent="1" />
+
+        <ToggleSwitch:HorizontalToggleSwitch
+            Grid.Row="1"
+            Grid.Column="1"
+            IsChecked="{Binding DenominatorEightBit, Mode=TwoWay}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UncheckedContent="0" 
+            CheckedContent="1"/>
+
+        <ToggleSwitch:HorizontalToggleSwitch
+            Grid.Row="1"
+            Grid.Column="2"
+            IsChecked="{Binding DenominatorFourBit, Mode=TwoWay}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UncheckedContent="0" 
+            CheckedContent="1" />
+
+        <ToggleSwitch:HorizontalToggleSwitch
+            Grid.Row="1"
+            Grid.Column="3"
+            IsChecked="{Binding DenominatorTwoBit, Mode=TwoWay}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UncheckedContent="0" 
+            CheckedContent="1" />
+
+        <ToggleSwitch:HorizontalToggleSwitch
+            Grid.Row="1"
+            Grid.Column="4"
+            IsChecked="{Binding DenominatorOneBit, Mode=TwoWay}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            UncheckedContent="0" 
+            CheckedContent="1" />
+
+        <local:LedControl
+            Grid.Row="2"
+            Grid.Column="0"
+            Width="35"
+            Height="35"
+            IsEnabled="False"
+            IsChecked="{Binding ResultSixteenBit}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center" />
+
+        <local:LedControl
+            Grid.Row="2"
+            Grid.Column="1"
+            Width="35"
+            Height="35"
+            IsEnabled="False"
+            IsChecked="{Binding ResultEightBit}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center" />
+
+        <local:LedControl
+            Grid.Row="2"
+            Grid.Column="2"
+            Width="35"
+            Height="35"
+            IsEnabled="False"
+            IsChecked="{Binding ResultFourBit}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center" />
+
+        <local:LedControl
+            Grid.Row="2"
+            Grid.Column="3"
+            Width="35"
+            Height="35"
+            IsEnabled="False"
+            IsChecked="{Binding ResultTwoBit}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center" />
+
+        <local:LedControl
+            Grid.Row="2"
+            Grid.Column="4"
+            Width="35"
+            Height="35"
+            IsEnabled="False"
+            IsChecked="{Binding ResultOneBit}"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center" />
+    </Grid>
+</Window>
